@@ -55,4 +55,4 @@ describe('< />', () => {
 //   expect(foo).toBe('mocked foo');
 //   expect(bar()).toBe('bar');
 // });
-// });
+});
