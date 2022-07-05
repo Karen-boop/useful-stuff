@@ -9,14 +9,7 @@ import translations from '../translations/en.json';
 import {__COMP__} from '../';
 import type Props from '';
 
-import defaultExport, {bar, foo} from '../foo-bar-baz';
-
-jest.mock('../foo-bar-baz', () => {
-  const originalModule = jest.requireActual('../foo-bar-baz');
-
-  
-  
-  
+import defaultExport, {bar, foo} from '../foo-bar-baz';  
 const mockProps: Props = {
 };
 
@@ -39,27 +32,27 @@ describe('< />', () => {
     });
   });
 
-//test.js
-import defaultExport, {bar, foo} from '../foo-bar-baz';
 
-jest.mock('../foo-bar-baz', () => {
-  const originalModule = jest.requireActual('../foo-bar-baz');
+// import defaultExport, {bar, foo} from '../foo-bar-baz';
 
-  //Mock the default export and named export 'foo'
-  return {
-    __esModule: true,
-    ...originalModule,
-    default: jest.fn(() => 'mocked baz'),
-    foo: 'mocked foo',
-  };
-});
+// jest.mock('../foo-bar-baz', () => {
+//   const originalModule = jest.requireActual('../foo-bar-baz');
 
-test('should do a partial mock', () => {
-  const defaultExportResult = defaultExport();
-  expect(defaultExportResult).toBe('mocked baz');
-  expect(defaultExport).toHaveBeenCalled();
+//   //Mock the default export and named export 'foo'
+//   return {
+//     __esModule: true,
+//     ...originalModule,
+//     default: jest.fn(() => 'mocked baz'),
+//     foo: 'mocked foo',
+//   };
+// });
 
-  expect(foo).toBe('mocked foo');
-  expect(bar()).toBe('bar');
-});
-});
+// test('should do a partial mock', () => {
+//   const defaultExportResult = defaultExport();
+//   expect(defaultExportResult).toBe('mocked baz');
+//   expect(defaultExport).toHaveBeenCalled();
+
+//   expect(foo).toBe('mocked foo');
+//   expect(bar()).toBe('bar');
+// });
+// });
