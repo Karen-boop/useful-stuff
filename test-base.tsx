@@ -5,6 +5,7 @@ import {mountWithAppContext, mockI18n} from 'tests/utilities';
 import {CustomRoot} from '@shopify/react-testing';
 
 import translations from '../translations/en.json';
+import {ENUM} from '../../../../../enums';
 
 import {__COMP__} from '../';
 import type Props from '';
@@ -32,7 +33,7 @@ describe('< />', () => {
     });
   });
 
-
+});
 // import defaultExport, {bar, foo} from '../foo-bar-baz';
 
 // jest.mock('../foo-bar-baz', () => {
@@ -55,4 +56,4 @@ describe('< />', () => {
 //   expect(foo).toBe('mocked foo');
 //   expect(bar()).toBe('bar');
 // });
-});
+
