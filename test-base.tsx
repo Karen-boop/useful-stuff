@@ -9,7 +9,14 @@ import translations from '../translations/en.json';
 import {__COMP__} from '../';
 import type Props from '';
 
+import defaultExport, {bar, foo} from '../foo-bar-baz';
 
+jest.mock('../foo-bar-baz', () => {
+  const originalModule = jest.requireActual('../foo-bar-baz');
+
+  
+  
+  
 const mockProps: Props = {
 };
 
