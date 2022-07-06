@@ -33,6 +33,22 @@ describe('< />', () => {
     });
   });
 
+  it('renders a disabled pageAction button if some <OnboardingCards /> are incomplete', async () => {
+    const wrapper = await mountWithAppContext(<InstagramOnboardingPage />, {
+      graphQL: createGraphQL({
+        InstagramOnboardingPage: fillGraphQL(InstagramOnboardingPageQuery, {
+          ...mockData,
+          currentShop: {
+            ...mockData.currentShop,
+          },
+        }),
+      }),
+    });
+
+    expect(wrapper)!.toContainReactComponentTimes(OnboardingCard, 8);
+  });
+
+
 });
 // import defaultExport, {bar, foo} from '../foo-bar-baz';
 
