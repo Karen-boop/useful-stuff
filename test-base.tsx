@@ -6,7 +6,6 @@ import {CustomRoot} from '@shopify/react-testing';
 
 import translations from '../translations/en.json';
 import {ENUM} from '../../../../../enums';
-import {localStorage} from '@shopify/jest-dom-mocks';
 
 import {__COMP__} from '../';
 import type Props from '';
